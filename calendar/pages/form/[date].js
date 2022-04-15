@@ -3,7 +3,9 @@ import { useRouter } from 'next/router';
 import Multiselect from 'multiselect-react-dropdown';
 
 
-const Form = ({date}) => {
+const Form = () => {
+    const router = useRouter();
+    const { date } = router.query;
     const [allParticipants, setAllParticipants] = useState([]);
     
     const [title, setTitle] = useState('');
@@ -11,7 +13,7 @@ const Form = ({date}) => {
     const [description, setDescription] = useState('');
     const [participants, setParticipants] = useState([]);
 
-    const router = useRouter();
+    
     const multiselectList = useRef();
 
     useEffect(() => {
@@ -58,7 +60,7 @@ const Form = ({date}) => {
 
         fetch('http://localhost:5000/api/meetings', options)
             .then((res) => res.json())
-            .then((data) => router.push('/meeting/' + data._id));
+            .then((data) => router.push('/..'));
     };
 
     const validateForm = () => {

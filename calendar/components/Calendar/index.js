@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Day from '../Day'
-import Form from '../Form';
+import Day from '../Day';
 
+import styles from './calendar.module.css'
 
 const month = [
     ['','', '01', '02', '03', '04', '05'],
@@ -14,9 +14,11 @@ const month = [
 
 const Calendar = ({meetings}) => {
     const [selectedDate, setSelectedDate] = useState([]);
+    const [formState, setFormState] = useState(false)
     
     return (
-        <div>
+        
+            <div>
             <h1>Calendar for the month of June</h1>
             <table>
                 <thead>
@@ -40,13 +42,19 @@ const Calendar = ({meetings}) => {
                                                          meetings={meetings.filter((meeting) => (
                                                              meeting.day  == day
                                                          ))}
+                                                         openForm={() => {
+                                                             setSelectedDate(day);
+                                                             setFormState(true);
+                                                         }}
                                                          ></Day>)}
-                                                         </td>
+                                </td>
                             ))}
                         </tr>
                     ))}
                 </tbody>
             </table>
+       
+        
         </div>
     );
 };

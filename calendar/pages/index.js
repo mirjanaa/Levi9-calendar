@@ -10,5 +10,5 @@ export default function Home() {
       .then((data) => setMeetings(data));
   }, []);
   
-  return <Calendar meetings={meetings}/>
+  return <Calendar meetings={meetings}/>;
 }
