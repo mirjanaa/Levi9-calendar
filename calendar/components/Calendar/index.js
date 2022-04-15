@@ -12,7 +12,7 @@ const month = [
     ['', '', '', '', '', '', '']
 ];
 
-const Calendar = () => {
+const Calendar = ({meetings}) => {
     const [selectedDate, setSelectedDate] = useState([]);
     
     return (
@@ -31,18 +31,20 @@ const Calendar = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {month.map((week, index) => {
+                    {month.map((week, index) => (
                         <tr key={index}>
-                            {week.map((day, index) => {
+                            {week.map((day, index) => (
+                                <td key={index}>
                                 {day == '' ? (<></>) : (<Day
-                                                         day={day}
-                                                         meetings={meetings.filter((meeting) => {
+                                                         date={day}
+                                                         meetings={meetings.filter((meeting) => (
                                                              meeting.day  == day
-                                                         })}
+                                                         ))}
                                                          ></Day>)}
-                            })}
+                                                         </td>
+                            ))}
                         </tr>
-                    })}
+                    ))}
                 </tbody>
             </table>
         </div>

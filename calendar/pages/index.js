@@ -7,8 +7,8 @@ export default function Home() {
   useEffect(() => {
     fetch('http://localhost:5000/api/meetings')
       .then((res) => res.json())
-      .then((data) => setMeetings(data))
+      .then((data) => setMeetings(data));
   }, []);
-
+  
   return <Calendar meetings={meetings}/>
 }

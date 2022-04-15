@@ -7,7 +7,7 @@ const { urlencoded, json } = require('body-parser');
 
 const app = express();
 
-const databaseString = process.env.DB_STING || 'mongodb://localhost:27017/callendar-base';
+const databaseString = process.env.DB_STING || 'mongodb://localhost:27017/calendar-base';
 
 mongoose.connect(databaseString, {
         useNewUrlParser: true,

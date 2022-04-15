@@ -2,7 +2,7 @@
     {
         "title" : "Jogging",
         "time" : "07:15",
-        "day" : 9,
+        "day" : "09",
         "description": "Jogging with Mark",
         "participants" : [
             "Marko", "Mirjana"
@@ -11,7 +11,7 @@
     {
         "title" : "Swimming",
         "time" : "16:45",
-        "day" : 16,
+        "day" : "16",
         "description": "No description",
         "participants" : [
             "Mirjana"
@@ -20,7 +20,7 @@
     {
         "title" : "Going out",
         "time" : "20:30",
-        "day" : 26,
+        "day" : "26",
         "description": "Going out with friends from work",
         "participants" : [
             "Mirjana", "Ana", "Tamara", "Marko", "Nikola"

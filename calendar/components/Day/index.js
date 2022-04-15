@@ -7,11 +7,11 @@ const Day = ({date, meetings, openForm}) => {
     return (
         <div>
             <h1>{date}</h1>
-            {meetings.map((meeting, index) => {
+            {meetings.map((meeting, index) => (
                 <div key={index}>
                     {meeting.time} {meeting.title}
                 </div>
-            })}
+            ))}
         </div>
     );
 };
