@@ -10,5 +10,7 @@ Startup instructions:
 
 - In the calendar folder run command `npm run start`
 
+- Visit the address `http://localhost:3000` in your browser
+
 
 
