@@ -1,4 +1,5 @@
 import Day from '../Day';
+import styles from './calendar.module.css'
 
 const month = [
     ['','', '01', '02', '03', '04', '05'],
@@ -11,18 +12,18 @@ const month = [
 
 const Calendar = ({meetings}) => {    
     return (
-        <div>
-            <h1>Calendar for the month of June</h1>
+        <div className={styles.page}>
+            <h2>Calendar for the month of June</h2>
             <table>
                 <thead>
                     <tr>
-                        <td>MONDAY</td>
-                        <td>TUESDAY</td>
-                        <td>WEDNESDAY</td>
-                        <td>THURSDAY</td>
-                        <td>FRIDAY</td>
-                        <td>SATURDAY</td>
-                        <td>SUNDAY</td>
+                        <td className={styles.header}>MONDAY</td>
+                        <td className={styles.header}>TUESDAY</td>
+                        <td className={styles.header}>WEDNESDAY</td>
+                        <td className={styles.header}>THURSDAY</td>
+                        <td className={styles.header}>FRIDAY</td>
+                        <td className={styles.header}>SATURDAY</td>
+                        <td className={styles.header}>SUNDAY</td>
                     </tr>
                 </thead>
                 <tbody>

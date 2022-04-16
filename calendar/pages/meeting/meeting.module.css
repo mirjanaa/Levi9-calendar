@@ -1,0 +1,38 @@
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 30%;
+    width: 40%;
+    padding: 30px;
+    font-size: x-large;
+    font-family: sans-serif;
+  }
+  
+.button {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: min-content;
+    padding: 0 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: medium;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+  
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.info td{
+    padding: 10px;
+}

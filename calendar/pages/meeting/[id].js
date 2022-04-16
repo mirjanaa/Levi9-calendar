@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import styles from './meeting.module.css'
 
 const Meeting = () => {
     const router = useRouter();
@@ -26,17 +27,28 @@ const Meeting = () => {
     };
 
     return (
-        <div>
+        <div className={styles.info}>
             <h2>{meeting?.title}</h2>
-            <p>{meeting?.description}</p>
-            <p>{meeting?.time}</p>
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td>Description:</td>
+                        <td>{meeting?.description}</td>
+                    </tr>
+                    <tr>
+                        <td>Time:</td>
+                        <td>{meeting?.time}</td>
+                    </tr>
+                </tbody>
+            </table>
             {meeting.participants?.length > 0 ? <h3>With: </h3> : <></>}
             <ul>
                 {meeting.participants?.map((participant, index) => (
                     <li key={index}>{participant}</li>
                 ))}
             </ul>
-            <button onClick={() => deleteMeeting()}>
+            <button onClick={() => deleteMeeting()} className={styles.button}>
                 Delete
             </button>
         </div>
