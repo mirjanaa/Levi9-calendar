@@ -1,0 +1,31 @@
+.item {
+    margin: 20px;
+    padding: 15px;
+    width: 200px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    border: none;
+    border-radius: 15px;
+  }
+  
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+  
+.item h1 {
+    color: white;
+    font-weight: normal;
+}
+  
+.meeting {
+    font-weight: normal;
+    color: white;
+    font-size: x-large;
+    padding-top: 20px;
+}
+  
+.meeting:hover {
+    font-weight: bold;
+    cursor: pointer;
+}

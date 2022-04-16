@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Multiselect from 'multiselect-react-dropdown';
+import styles from './date.module.css';
 
 
 const Form = () => {
@@ -76,37 +77,40 @@ const Form = () => {
     };
 
     return (
-        <form onSubmit={(el) => submitForm(el)}>
+        <form onSubmit={(el) => submitForm(el)} className={styles.form}>
             <h2>Schedule a new meeting for June/{date}/2022</h2>
-            <div>
-                <label>Title: </label>
+            <div className={styles.group}>
+                <label className={styles.label}>Title: </label>
                 <input
                     type='text'
                     placeholder='Enter title...'
                     value={title}
                     onChange={(el) => setTitle(el.target.value)}
+                    className={styles.input}
                 />
             </div>
-            <div>
-                <label>Time: </label>
+            <div className={styles.group}>
+                <label className={styles.label}>Time: </label>
                 <input
                     type='text'
                     placeholder='Enter time...'
                     value={time}
                     onChange={(el) => setTime(el.target.value)}
+                    className={styles.input}
                 />
             </div>
-            <div>
-                <label>Description: </label>
+            <div className={styles.group}>
+                <label className={styles.label}>Description: </label>
                 <input
                     type='text'
                     placeholder='Enter description...'
                     value={description}
                     onChange={(el) => setDescription(el.target.value)}
+                    className={styles.input}
                 />
             </div>
-            <div>
-                <label>Add participants: </label>
+            <div className={styles.group}>
+                <label className={styles.label}>Add participants: </label>
                 <Multiselect
                     options={allParticipants}
                     selectedValues={[]}
@@ -120,10 +124,10 @@ const Form = () => {
                     ref={multiselectList}
                 />
             </div>
-            <button type='submit'>
+            <button type='submit' className={styles.button}>
                 Add
             </button>
-            <button onClick={(el) => resetForm(el)}>
+            <button onClick={(el) => resetForm(el)} className={styles.button}>
                 Cancel
             </button>
         </form>
