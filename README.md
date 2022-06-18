@@ -14,6 +14,7 @@ Startup instructions:
 
 - In the calendar folder run commands:
   - `npm install`
+  - `npm run build`
   - `npm run start`
 
 - Visit the address `http://localhost:3000` in your browser
