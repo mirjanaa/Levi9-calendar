@@ -1,54 +1,51 @@
 .form {
-    width: 70%;
-    margin: 40px auto;
-    position:fixed;
-    left:15%;
-    padding: 20px;
-    border: none;
-    font-family: sans-serif;
-    justify-content: center;
+  width: 70%;
+  margin: 40px auto;
+  position: fixed;
+  left: 15%;
+  padding: 20px;
+  border: none;
+  font-family: sans-serif;
+  justify-content: center;
 }
 
 .group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .input {
-    display: block;
-    width: 100%;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-family: sans-serif;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: sans-serif;
 }
 
 .button {
-    display: inline-block;
-    align-items: center;
-    height: 30px;
-    width: min-content;
-    padding: 0 20px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    font-size: medium;
-    background-color:rgba(0, 0, 0, 0.4) ;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-    margin-right:5px;
+  display: inline-block;
+  align-items: center;
+  height: 30px;
+  width: min-content;
+  padding: 0 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: medium;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  margin-right: 5px;
 }
-  
+
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .form h2 {
-    align-self: left;
-    font-size: 40px;
-    font-weight: normal;
+  align-self: left;
+  font-size: 40px;
+  font-weight: normal;
 }
-
-
-  
