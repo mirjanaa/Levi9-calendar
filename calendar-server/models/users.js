@@ -15,7 +15,17 @@ const getAllUsers = async () => {
   return users;
 };
 
+const createNewUser = async (name) => {
+  const newUser = new User({
+    _id: new mongoose.Types.ObjectId(),
+    name: name,
+  });
+  await newUser.save();
+  return newUser;
+};
+
 module.exports = {
   User,
   getAllUsers,
+  createNewUser,
 };

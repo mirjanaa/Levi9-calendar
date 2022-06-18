@@ -19,8 +19,9 @@ const meetingSchema = new mongoose.Schema({
     required: true,
   },
   participants: {
-    type: [mongoose.Schema.Types.String],
+    type: [mongoose.Schema.Types.ObjectId],
     required: true,
+    ref: "User",
   },
 });
 

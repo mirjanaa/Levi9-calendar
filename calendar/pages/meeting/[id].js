@@ -22,7 +22,7 @@ const Meeting = () => {
     };
 
     fetch("http://localhost:5000/api/meetings/" + id, options).then(
-      router.back()
+      router.back
     );
   };
 
