@@ -21,7 +21,6 @@ const meetingSchema = new mongoose.Schema({
   participants: {
     type: [mongoose.Schema.Types.String],
     required: true,
-    ref: "User",
   },
 });
 
