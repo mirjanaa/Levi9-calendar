@@ -24,8 +24,14 @@ const createNewUser = async (name) => {
   return newUser;
 };
 
+const findUserById = async (id) => {
+  const user = await User.findOne({ _id: id }).exec();
+  return user.name;
+};
+
 module.exports = {
   User,
   getAllUsers,
   createNewUser,
+  findUserById,
 };
