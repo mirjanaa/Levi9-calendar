@@ -7,7 +7,6 @@ const Meeting = () => {
   const { id } = router.query;
 
   const [meeting, setMeeting] = useState([]);
-  const [userName, setUserName] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:5000/api/meetings/" + id)
@@ -43,7 +42,12 @@ const Meeting = () => {
           </tr>
         </tbody>
       </table>
-
+      {meeting.participants?.length > 0 ? <h3>With: </h3> : <></>}
+      <ul>
+        {meeting.participants?.map((participant, index) => (
+          <li key={index}>{participant}</li>
+        ))}
+      </ul>
       <button onClick={() => deleteMeeting()} className={styles.button}>
         Delete
       </button>

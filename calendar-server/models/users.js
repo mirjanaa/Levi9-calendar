@@ -15,23 +15,7 @@ const getAllUsers = async () => {
   return users;
 };
 
-const createNewUser = async (name) => {
-  const newUser = new User({
-    _id: new mongoose.Types.ObjectId(),
-    name: name,
-  });
-  await newUser.save();
-  return newUser;
-};
-
-const findUserById = async (id) => {
-  const user = await User.findOne({ _id: id }).exec();
-  return user.name;
-};
-
 module.exports = {
   User,
   getAllUsers,
-  createNewUser,
-  findUserById,
 };

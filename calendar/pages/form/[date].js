@@ -39,7 +39,7 @@ const Form = () => {
         title: title,
         time: time,
         description: description,
-        participants: participants.map((x) => x._id),
+        participants: participants.map((x) => x.name),
         day: date,
       };
       postMeeting(newMeeting);
